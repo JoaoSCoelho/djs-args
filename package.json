@@ -1,0 +1,20 @@
+{
+  "name": "djs-args",
+  "version": "1.0.0",
+  "description": "A library that allows you to ask the user for specific arguments/parameters when executing some command, based on discord `options` for slash commands, but adapted and improved for message commands",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoSCoelho/djs-args.git"
+  },
+  "keywords": ["discord.js", "djs", "discord", "slash", "command", "message", "commands", "arguments", "parameters", "options"],
+  "author": "joaoscoelho",
+  "bugs": {
+    "url": "https://github.com/JoaoSCoelho/djs-args/issues"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/JoaoSCoelho/djs-args#readme"
+}
