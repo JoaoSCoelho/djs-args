@@ -10,11 +10,39 @@
     "type": "git",
     "url": "git+https://github.com/JoaoSCoelho/djs-args.git"
   },
-  "keywords": ["discord.js", "djs", "discord", "slash", "command", "message", "commands", "arguments", "parameters", "options"],
+  "keywords": [
+    "discord.js",
+    "djs",
+    "discord",
+    "slash",
+    "command",
+    "message",
+    "commands",
+    "arguments",
+    "parameters",
+    "options"
+  ],
   "author": "joaoscoelho",
   "bugs": {
     "url": "https://github.com/JoaoSCoelho/djs-args/issues"
   },
   "license": "ISC",
-  "homepage": "https://github.com/JoaoSCoelho/djs-args#readme"
+  "homepage": "https://github.com/JoaoSCoelho/djs-args#readme",
+  "dependencies": {
+    "discord.js": "^13.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "@typescript-eslint/eslint-plugin": "^5.3.1-alpha.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-scope": "^6.0.0",
+    "prettier": "^2.4.1"
+  }
 }
