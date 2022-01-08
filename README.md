@@ -27,12 +27,12 @@ interface MyCommandProps {
   // Here you can add your own properties, like "name", "description", etc.
 }
 
-export default class BaseCommand extends OptionsCommand {
-  run!: (message: Message, client: Client) => void
-
+export default abstract class BaseCommand extends OptionsCommand {
   constructor(props: MyCommandProps & OptionsCommandProps) {
     super(props)
   }
+
+  abstract run(message: Message, client: Client): void
 
   // Method that will be directly called by the "messageCreate" event
   async exec(
@@ -89,7 +89,7 @@ export default class AvatarCommand extends BaseCommand {
     })
   }
 
-  run = async (message: Message) => {
+  async run(message: Message) {
     const user = (this.options[0].value as User | undefined) || message.author
 
     message.reply(
@@ -116,3 +116,5 @@ export default class AvatarCommand extends BaseCommand {
 | truthyAliases | `string[]`  | `['true', 't', '1', 'y', 'yes', 'sim', 's', 'verdadeiro']` | &check;  | Set the values that will be considered and treated as `true` if the user types it.<br>Maybe you don't want to leave the default values behind, so you can add new ones without losing the defaults like this:<br>`truthyAliases: [...OptionsCommand.defaultTruthyAliases, ...newTruthyAliases]`                                                                                           |
 | required      | `boolean`   | `false`                                                    | &check;  | Defines if the user needs to put any value for this option.                                                                                                                                                                                                                                                                                                                         |
 | value         | `boolean`   | `undefined`                                                | &check;  | Sets a default value for the option.<br>It is through this property that you will look for the value that the user typed.<br>NOTE: Does not work if `required: true`                                                                                                                                 |
+
+***ENGLISH VERSION OF THE README IS INCOMPLETE, YOU CAN SEE THE PORTUGUESE VERSION [HERE](./README.pt.md)***
