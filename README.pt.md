@@ -177,7 +177,7 @@ export default class AvatarCommand extends BaseCommand {
 | description    | `string`                          |                             | &times;  | Descrição do que a opção significa                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | name           | `string`                          |                             | &times;  | O nome da opção                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | caseSensitive  | `boolean`                         | `false`                     | &check;  | Define se o que o usuário digitar deve diferenciar maiúsculas de minúsculas quando seu input for considerado o nome de um cargo.<br>Se definido como `caseSensitive: false`, o argumento `MEMBRO` pode ser considerado igual ao nome de algum cargo que seja `membro`, `Membro`, etc...<br>Se definido como `caseSensitive: true`, o argumento `MEMBRO` só irá dar "match" com algum cargo que se chame exatamente `MEMBRO` (ou que o inclua, se `matchIncluding: true`). |
-| matchBy        | `('MENTION' \| 'NAME' \| 'ID')[]` | `['NAME', 'ID', 'MENTION']` | &check;  | Array com os métodos que o bot usará para encontrar o cargo digitado pelo usuário.<br>Exemplo, se nesse array não estiver incluso o nome `'ID'`, e o usuário digitar o ID de um cargo, ele não será encontrado pelo bot.                                                                                                                                                                                                                                              |
+| matchBy        | <code>[RoleMatchBy](#RoleMatchBy)[]</code> | `['NAME', 'ID', 'MENTION']` | &check;  | Array com os métodos que o bot usará para encontrar o cargo digitado pelo usuário.<br>Exemplo, se nesse array não estiver incluso o nome `'ID'`, e o usuário digitar o ID de um cargo, ele não será encontrado pelo bot.                                                                                                                                                                                                                                              |
 | matchIncluding | `boolean`                         | `false`                     | &check;  | Define se o bot deve considerar uma correspondência válida caso o input do usuário esteja contido no nome de um cargo.<br>Exemplo, o input do usuário foi `membro`, mas o nome do cargo é `membros`, caso `matchIncluding: true`, o bot retornará o cargo `membros`, mas se `matchIncluding: false`, o bot não retornará cargo algum.                                                                                                                                     |
 | required       | `boolean`                         | `false`                     | &check;  | Define se o usuário precisa colocar algum valor para essa opção.                                                                                                                                                                                                                                                                                                                                                                                                          |
 | value          | `Role`                            | `undefined`                 | &check;  | Define um valor default para a opção.<br>É por meio dessa propriedade que você buscará o valor que o usuário digitou.<br>OBS: Não funciona se `required: true`                                                                                                                                                                                                                                                                                                            |
@@ -214,6 +214,16 @@ export default class AvatarCommand extends BaseCommand {
 
 
 ## Types
+
+#### ChannelMatchBy
+```ts
+'MENTION' | 'NAME' | 'ID'
+```
+
+#### RoleMatchBy
+```ts
+'MENTION' | 'NAME' | 'ID'
+```
 
 #### ApplicationCommandOptionNumeralChoice
 ```ts
