@@ -3,5 +3,5 @@ module.exports = {
   singleQuote: true,
   arrowParrens: 'avoid',
   traillingComma: 'none',
-  endOfLine: 'auto'
+  endOfLine: 'auto',
 }
