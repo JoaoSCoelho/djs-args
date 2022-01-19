@@ -16,7 +16,9 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "prettier"
+        "prettier",
+        "unused-imports",
+        "autofix"
     ],
     "rules": {
         "prettier/prettier": "error",
@@ -32,6 +34,9 @@
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-empty-function": "off"
+        "@typescript-eslint/no-empty-function": "off",
+        "curly": "error",
+        "unused-imports/no-unused-imports-ts": "error",
+        "autofix/no-unused-vars": "off"
     }
 }
