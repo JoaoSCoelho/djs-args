@@ -160,7 +160,7 @@ export default class AvatarCommand extends BaseCommand {
 | value       | <code>[MentionableValue](#MentionableValue)</code>   | `undefined`                                                      | &check;  | Define um valor default para a opção.<br>É por meio dessa propriedade que você buscará o valor que o usuário digitou.<br>OBS: Não funciona se `required: true` |
 
 ### tipo NUMBER
-*<span style="color: #F1E05A;">OBS: O tipo NUMBER aceita números positivos e negativos de até 10 dígitos antes da vírgula/ponto e até 5 dígitos depois da vírgula/ponto. Se precisa que o usuário digite um valor maior que este, talvez deva escolher o tipo INTEGER ([ver OBSERVAÇÕES do tipo INTEGER](#tipo-INTEGER))</span>*
+*<span class="important-obs-text">OBS: O tipo NUMBER aceita números positivos e negativos de até 10 dígitos antes da vírgula/ponto e até 5 dígitos depois da vírgula/ponto. Se precisa que o usuário digite um valor maior que este, talvez deva escolher o tipo INTEGER ([ver OBSERVAÇÕES do tipo INTEGER](#tipo-INTEGER))</span>*
 | Propriedade   | Tipo                                                                                           | Padrão             | Opcional | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------- | ---------------------------------------------------------------------------------------------- | ------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type          | `'NUMBER'`                                                                                     |                    | &times;  | O tipo da opção que você deseja que o usuário digite                                                                                                                                                                                                                                                                                                                                                                        |
@@ -363,5 +363,8 @@ Esses erros são padronizados e você pode a partir deles enviar algum feedback 
 }
 .string-variable {
   color: #82D9EC;
+}
+.important-obs-text {
+  color: #F1E05A;
 }
 </style>
